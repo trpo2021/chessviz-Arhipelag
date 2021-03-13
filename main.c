@@ -1,13 +1,12 @@
 #include <ctype.h>
 #include <stdio.h>
+#include "turning.h"
 
 #define SIZE 9
 
 int main()
 {
     char board[SIZE][SIZE];
-    char turn[6];
-    char figure;
     int i, j, ch;
 
     for (i = 1; i < 9; ++i)
