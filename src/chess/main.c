@@ -1,6 +1,6 @@
 #include <ctype.h>
 #include <stdio.h>
-#include "turning.h"
+#include <chesslib/turning.h>
 
 #define SIZE 9
 
