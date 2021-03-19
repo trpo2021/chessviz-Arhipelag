@@ -1,11 +1,15 @@
-chess: main.o turning.o
-		gcc -Wall -Werror -o chess main.o turning.o
+all: bin/chess
 
-main.o: main.c
-		gcc -Wall -Werror -c -o main.o main.c
+bin/chess: obj/main.o obj/turning.o
+		gcc -Wall -Werror -I src -o bin/chess obj/main.o obj/turning.o
 
-turning.o: turning.c
-		gcc -Wall -Werror -c -o turning.o turning.c
+obj/main.o: src/chess/main.c
+		gcc -Wall -Werror -c -I src -o obj/main.o src/chess/main.c
+
+obj/turning.o: src/chesslib/turning.c
+		gcc -Wall -Werror -c -I src -o obj/turning.o src/chesslib/turning.c
+
+.PHONY : clean;
 
 clean:
-		rm *.o chess
+		rm -rf obj/*.o bin/chess
