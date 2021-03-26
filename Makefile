@@ -1,7 +1,10 @@
 all: bin/chess
 
-bin/chess: obj/main.o obj/turning.o
-		gcc -Wall -Werror -I src -o bin/chess obj/main.o obj/turning.o
+bin/chess: obj/main.o obj/libchess.a
+		gcc -Wall -Werror -I src -o bin/chess obj/main.o obj/libchess.a
+
+obj/libchess.a: obj/turning.o 
+		ar rcs obj/libchess.a obj/turning.o
 
 obj/main.o: src/chess/main.c
 		gcc -Wall -Werror -c -I src -o obj/main.o src/chess/main.c
