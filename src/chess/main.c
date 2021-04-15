@@ -1,6 +1,6 @@
+#include <chesslib/turning.h>
 #include <ctype.h>
 #include <stdio.h>
-#include <chesslib/turning.h>
 
 #define SIZE 9
 
@@ -41,6 +41,5 @@ int main()
     printf("Введите что-нибудь, если хотите начать игру\n");
 
     while ((ch = getchar()) != EOF)
-    	turning(board);
-
+        turning(board);
 }
