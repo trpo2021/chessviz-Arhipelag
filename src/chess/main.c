@@ -1,4 +1,4 @@
-#include <chesslib/turning.h>
+#include <libchess/turning.h>
 #include <ctype.h>
 #include <stdio.h>
 
