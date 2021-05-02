@@ -1,5 +1,5 @@
-#include <libchess/turning.h>
 #include <ctype.h>
+#include <libchess/turning.h>
 #include <stdio.h>
 
 #define SIZE 9
